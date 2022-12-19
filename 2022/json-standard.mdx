@@ -1,0 +1,90 @@
+# JSON Standard-2022
+THIS JSON MAY NOT ALWAYS BE VALID
+## Root
+```json
+  {
+    "id":number,
+    "name":string,
+    "version":version,
+    "readme":readme,
+    "classes": classes[],
+    "enums": enums[],
+    "functions": functions[],
+    "interfaces": interfaces[],
+    "namespaces": namespaces[],
+    "typeAliases": typeAliases[],
+    "variables": variables[],
+  }
+ ```
+ ## Classes
+ ```json
+  {
+    "id": number,
+    "name": string,
+    "source": {
+      "line":number,
+      "file":string,
+      "path":string,
+      "url":string,
+    },
+    "comment": {
+        "description":string,
+        "blockTags":blockTags[],
+        "modifierTags":modifierTags[],
+     },
+     "external":boolean,
+     "abstract":boolean,
+     "accessibility":string,
+     "parameters":parameters[],
+     "properties":properties[],
+  }
+ ```
+### blockTags
+NOT IMPLEMENTED
+### modifierTags
+NOT IMPLEMENTED
+### parameters
+```json
+{
+  "id":number
+  "name":string,
+  "comment": {
+    "description":number,
+    "blockTags": blockTags[],
+    "modifierTags": modifierTags[],
+  },
+  "type": {
+    "kind":string,
+     "type":string,
+  }
+ }
+```
+### properties
+```json
+{
+  "id":number,
+  "name":string,
+  "source": {
+    "line":number,
+    "file":string,
+    "path":string,
+    "url":string,
+   },
+   "comment": {
+     "description":string,
+     "blockTags": blockTags[],
+     "modifierTags": modifierTags[],
+    },
+    "parentId":number,
+    "accessibility":string,
+    "abstract":boolean,
+    "static":boolean,
+    "readonly":boolean,
+    "optional":boolean,
+    "type": {
+      "kind":string,
+       "id":null,
+        "name":string,
+     }
+  }
+```
